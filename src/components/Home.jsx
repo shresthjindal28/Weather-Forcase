@@ -23,8 +23,8 @@ const Home = ({ weatherData, darkMode }) => {
     };
 
     return (
-        <div className="p-5 bg-[#4B5563] rounded-md mt-5 text-black">
-            <div className="rounded-md w-[240px] flex flex-col items-start p-6 bg-[#282e38] text-white">
+        <div className="p-5 bg-[#4B5563]  w-screen md:w-full  rounded-md mt-5 text-black">
+            <div className="rounded-md  gap-4 md:gap-0 w-full  md:w-[240px] flex flex-col items-start p-6 bg-[#282e38] text-white">
                 <div className="text-xl">Now</div>
                 <div className="flex items-center text-3xl font-bold">{temperatureCelsius}°C
                     {renderTemperatureIcon()}

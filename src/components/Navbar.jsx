@@ -14,8 +14,8 @@ const Navbar = ({ onSearch, darkMode }) => {
     };
 
     return (
-        <nav className={`navbar flex-3 navbar-expand-lg p-5 flex items-center justify-between ${darkMode ? 'bg-dark text-white' : 'bg-light text-black'}`}>
-            <div className="container-fluid">
+        <nav className={`navbar flex-3 navbar-expand-lg p-5  md:flex items-center justify-between ${darkMode ? 'bg-dark text-white' : 'bg-light text-black'}`}>
+            <div className="container-fluid mb-5 md:mb-0">
                 <a className="navbar-brand flex gap-2 items-center" href="#">
                     <FilterDramaIcon />
                     <p className="font-bold text-xl">Weather App</p>

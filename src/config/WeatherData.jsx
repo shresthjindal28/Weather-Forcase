@@ -49,7 +49,7 @@ const WeatherData = ({darkMode}) => {
     <div>
       <Navbar onSearch={handleSearch} darkMode={darkMode}/>
       {weatherData && airQualityData && (
-        <div className="flex gap-10 justify-center">
+        <div className="flex flex-col items-center md:items-start md:flex-row gap-10 justify-center">
           <div className="">
             <Home weatherData={weatherData} darkMode={darkMode} />
           </div>

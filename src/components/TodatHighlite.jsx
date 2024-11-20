@@ -35,27 +35,27 @@ const TodatHighlite = ({ weatherData, airQualityData }) => {
     };
 
     return (
-        <div className='bg-[#4B5563] text-white w-[840px] rounded-md p-6 mt-5  gap-8'>
+        <div className='bg-[#4B5563] text-white w-screen md:w-[840px] rounded-md p-6 -mt-8 md:mt-5  gap-8'>
            
-        <div className="flex gap-6 mb-8">
-            <div className="bg-[#282e38] p-4 rounded-md w-2/3">
-            <div className="">
+        <div className="flex flex-col md:flex-row gap-6 mb-8">
+            <div className="bg-[#282e38] p-4 rounded-md md:w-2/3">
+                <div className="mb-4 md:mb-0">
                     <h1 className='text-2xl'>Today's Highlights</h1>
                 </div>
-                <div className="flex flex-col space-y-4">
-                    <div className="flex items-center space-x-2">
+                <div className="flex flex-col md:space-y-4">
+                    <div className="flex items-center gap-2 md:gap-0 space-x-2">
                         <SpeedIcon />
                         <h1>Air Quality Index: </h1>
                         <p className='text-lg'>{renderAirQualityDescription(airQualityIndex)}</p>
                     </div>
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center gap-2 md:gap-0 space-x-2">
                         <AirIcon />
                         <h1>Wind Speed: </h1>
                         <p className='text-lg'>{wind.speed} m/s</p>
                     </div>
-                    <div className="flex gap-7 ">
+                    <div className="flex mt-3 gap-8 md:gap-7 ">
                         <div className=" flex flex-col items-start gap-3">
-                            <p>CO Level: </p>
+                            <p className='flex flex-wrap'>CO Level: </p>
                             <p className='text-lg'>{co} µg/m³</p>
                         </div>
                         <div className=" flex flex-col items-start gap-3">
@@ -74,9 +74,9 @@ const TodatHighlite = ({ weatherData, airQualityData }) => {
                 </div>
             </div>
 
-            <div className="bg-[#282e38] p-4 flex flex-col justify-between rounded-md w-1/3">
+            <div className="bg-[#282e38] p-4 flex flex-col gap-5 md:gap-0 justify-between rounded-md md:w-1/3">
 
-                <div className="flex flex-col  gap-5 space-x-2">
+                <div className="flex md:flex-col  gap-5 space-x-2">
                     <WbSunnyIcon  style={{ fontSize: 35 }}/>
                     <div className="flex gap-4">
 
@@ -84,7 +84,7 @@ const TodatHighlite = ({ weatherData, airQualityData }) => {
                     <p className='text-lg'>{formatTime(sys.sunrise)}</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-5 space-x-2">
+                <div className="flex md:flex-col gap-5 space-x-2">
                     <Brightness3Icon style={{ fontSize: 35 }} />
                     <div className="flex gap-5">
 
@@ -96,23 +96,23 @@ const TodatHighlite = ({ weatherData, airQualityData }) => {
         </div>
 
             <div className="">
-                <div className="bg-[#282e38]  rounded-md flex justify-between p-6 w-full">
-                    <div className="flex flex-col ">
+                <div className="bg-[#282e38]  rounded-md flex flex-col md:flex-row justify-between p-6 w-full">
+                    <div className="flex gap-4 md:gap-0 md:flex-col ">
                         <OpacityIcon />
                         <h1>Humidity: </h1>
                         <p className='text-lg'>{main.humidity}%</p>
                     </div>
-                    <div className="flex flex-col ">
+                    <div className="flex gap-4 md:gap-0 md:flex-col ">
                         <SpeedIcon />
                         <h1>Pressure: </h1>
                         <p className='text-lg'>{main.pressure} hPa</p>
                     </div>
-                    <div className="flex flex-col ">
+                    <div className="flex gap-4 md:gap-0 md:flex-col ">
                         <VisibilityIcon />
                         <h1>Visibility: </h1>
                         <p className='text-lg'>{visibility / 1000} km</p>
                     </div>
-                    <div className="flex flex-col ">
+                    <div className="flex gap-4 md:gap-0 md:flex-col ">
                         <WbSunnyIcon />
                         <h1>Feels Like: </h1>
                         <p className='text-lg'>{main.feels_like}°C</p>
